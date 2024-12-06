@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz zgłoszenia do drużyny e-sportowej</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="text"], input[type="email"], input[type="password"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 100px;
+        }
+        .checkbox-group, .radio-group {
+            margin-bottom: 15px;
+        }
+        .checkbox-group label, .radio-group label {
+            display: block;
+        }
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        button[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <h1>Formularz zgłoszenia</h1>
+
+        <label for="imie">Imię:</label>
+        <input type="text" id="imie" name="imie" required>
+
+        <label for="drugie_imie">Drugie imię (opcjonalne):</label>
+        <input type="text" id="drugie_imie" name="drugie_imie">
+
+        <label for="nazwisko">Nazwisko:</label>
+        <input type="text" id="nazwisko" name="nazwisko" required>
+
+        <label>Gry, które Cię interesują:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="gry" value="valorant"> Valorant</label>
+            <label><input type="checkbox" name="gry" value="dota2"> Dota 2</label>
+            <label><input type="checkbox" name="gry" value="cod"> Call of Duty: Warzone</label>
+            <label><input type="checkbox" name="gry" value="fortnite"> Fortnite</label>
+            <label><input type="checkbox" name="gry" value="overwatch2"> Overwatch 2</label>
+        </div>
+
+        <label>Twoje doświadczenie w e-sporcie:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="doswiadczenie" value="druzyna" required> Tak, grałem/-am w drużynie</label>
+            <label><input type="radio" name="doswiadczenie" value="solo"> Tak, ale nie w drużynie e-sportowej</label>
+            <label><input type="radio" name="doswiadczenie" value="brak"> Nie</label>
+        </div>
+
+        <label>Gdzie mieszkasz na stałe?</label>
+        <select name="region" required>
+            <option value="europa">Europa</option>
+            <option value="azja">Azja</option>
+            <option value="ameryka">Ameryka Północna/Południowa</option>
+            <option value="inne">Afryka, Australia i Oceania</option>
+        </select>
+
+        <label>Posiadasz konto na platformach:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="platformy" value="steam"> Steam</label>
+            <label><input type="checkbox" name="platformy" value="epic"> Epic Games</label>
+            <label><input type="checkbox" name="platformy" value="battlenet"> Battle.net</label>
+            <label><input type="checkbox" name="platformy" value="origin"> Origin</label>
+        </div>
+
+        <label>Twoje zainteresowania:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="zainteresowania" value="sport"> Sport</label>
+            <label><input type="checkbox" name="zainteresowania" value="muzyka"> Muzyka</label>
+            <label><input type="checkbox" name="zainteresowania" value="ksiazki"> Książki</label>
+            <label><input type="checkbox" name="zainteresowania" value="filmy"> Filmy</label>
+            <label><input type="checkbox" name="zainteresowania" value="technologie"> Technologie</label>
+        </div>
+
+        <label>Prędkość Twojego internetu:</label>
+        <select name="internet" required>
+            <option value="low">&lt; 2 Mbps</option>
+            <option value="medium">2–5 Mbps</option>
+            <option value="high">5–15 Mbps</option>
+            <option value="very-high">&gt; 15 Mbps</option>
+        </select>
+
+        <label>Jak oceniasz swój komputer pod względem wydajności?</label>
+        <select name="wydajnosc" required>
+            <option value="bardzo-dobry">Bardzo dobry</option>
+            <option value="dobry">Dobry</option>
+            <option value="przecietny">Przeciętny</option>
+            <option value="slaby">Słaby</option>
+        </select>
+
+        <label for="dlaczego">Dlaczego uważasz, że to właśnie Ciebie powinniśmy przyjąć?</label>
+        <textarea id="dlaczego" name="dlaczego"></textarea>
+
+        <label for="haslo">Hasło do formularza:</label>
+        <input type="password" id="haslo" name="haslo" required>
+
+        <div>
+            <label><input type="checkbox" name="kopie" value="email"> Wyślij kopię formularza na mój e-mail</label><br>
+            <label><input type="checkbox" name="potwierdzenie" value="email"> Wyślij mi potwierdzenie dostarczenia formularza</label><br>
+            <label><input type="checkbox" name="odpowiedz" value="email"> Wyślij odpowiedź również na mój e-mail</label>
+        </div>
+
+        <button type="reset">RESET</button>
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>
+
+
+//Maksym Vasko//
